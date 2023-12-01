@@ -2,49 +2,63 @@
     margin: 0;
     padding: 0;
 }
-header{
-    grid-area: header;
-    background-color: blue;
-    text-align: center;
-    padding: 1%;
-}
-aside{
-    grid-area: aside;
-    background-color: green;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-}
-main{
-    grid-area: main;
-    background-color: yellow;
-    height: 100vh;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(250px, 1fr));
-    gap: 10px;
-}
-footer{
-    grid-area: footer;
-    background-color: red;
-    text-align: center;
-    padding: 1%;
-}
-body{
+.layout-container{
     display: grid;
     grid-template-columns: 10% auto;
-    grid-template-areas:
+    grid-template-areas: 
     "header header"
     "aside main"
     "footer footer";
 }
-
+img{
+    width: 250px;
+    height: 210px;
+}
+header{
+    grid-area: header;
+    background-color: aqua;
+    padding: 1%;
+    text-align: center;
+}
+aside{
+    grid-area: aside;
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5px;
+}
+.sub-categories{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    gap: 5px;
+    font-size: larger;
+}
+main{
+    grid-area: main;
+    background-color: cadetblue;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    gap: 20px;
+    height: 100vh;
+}
 .card{
-    margin-top: 5%;
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.text-product{
     display: flex;
     flex-direction: column;
 }
-.card img{
-    width: 80%;
-    height: 70%;
+footer{
+    grid-area: footer;
+    background-color: aqua;
+    padding: 1%;
+    text-align: center;
 }
